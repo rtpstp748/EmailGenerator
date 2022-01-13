@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="John Dean">
+        <title>Email Address Generator</title>    
+    <script>
+      // this function generates an email address.
+
+        function generateEmail (event, form) {
+          event.preventDefault()
+
+          document.getElementById("email").innerHTML =
+           form.elements["first"].value + "." +
+           form.elements["last"].value + "@park.edu";
+        form.reset();
+           form.elements["first"].focus();
+           
+        } // end generateEmail
+    </script>
+    </head>
+
+      <body> 
+       <h3>
+           Enter your first and last names and then click the button.
+       </h3>
+
+       <form onsubmit="generateEmail(event, this);">
+         First Name:
+         <input type="text" id="first" size="15" autofocus>
+         <br>
+         Last Name:
+         <input type="text" id="last" size="15">
+         <br> <br>
+         <input type="submit" value="Generate Email">
+         </form>
+
+
+
+         <p id="email"></p>
+         </p>
+      </body>
+      </html>
+
+
+
+
+
+    
+  
